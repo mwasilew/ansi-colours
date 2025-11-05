@@ -16,3 +16,10 @@ jobs:
           for i in $(seq 255); do
               echo -e "\e[38;5;${i};48;5;232m${i}"
           done
+          for i in $(seq 255); do
+              echo -e "\e[38;5;0;48;5;${i}m${i}"
+          done
+
+          for i in $(seq 255); do
+              echo -e "\e[38;5;195;48;5;${i}m${i}"
+          done
