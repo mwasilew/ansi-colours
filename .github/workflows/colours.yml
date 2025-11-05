@@ -1,0 +1,18 @@
+name: Show ANSI colours
+
+on: [push, workflow_dispatch]
+
+jobs:
+  terminal:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Terminal colours
+        run: |
+          for i in $(seq 255); do
+              echo -e "\e[38;5;${i};48;5;255m${i}"
+          done
+
+          for i in $(seq 255); do
+              echo -e "\e[38;5;${i};48;5;232m${i}"
+          done
